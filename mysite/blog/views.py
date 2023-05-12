@@ -7,7 +7,7 @@ from django.core.paginator import Paginator
 
 
 def post_list(request):
-    posts = Post.published.all()
+    post_list = Post.published.all()
     # pagination with 3 posts/page
     paginator = Paginator(post_list, 3)
     page_number = request.GET.get('page', 1)
